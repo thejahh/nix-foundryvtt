@@ -120,6 +120,14 @@ in
         '';
       };
 
+      protocol = mkOption {
+        type = types.nullOr types.str;
+        default = "";
+        description = ''
+          Specify default ip version, either "4" or "6".
+        '';
+      };
+
       proxyPort = mkOption {
         type = types.nullOr types.int;
         default = null;
